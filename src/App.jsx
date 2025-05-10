@@ -81,6 +81,7 @@ function App() {
           ))}
         </ul>
         <button onClick={handleClear}> Clear ALL</button>
+        <span>Усього: {todos.length} завдань</span>
       </div>
     </div>
   );
