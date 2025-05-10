@@ -20,7 +20,7 @@ function App() {
   });
 
   const dispatch = useDispatch();
-  const todos = useSelector((state) => state.todos.todos);
+  const todos = useSelector((state) => state.todos.items);
 
   const handleAdd = (data) => {
     dispatch(

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  todos: [],
+  items: [],
 };
 
 const TodosSlice = createSlice({
@@ -9,19 +9,13 @@ const TodosSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
-      // const newTodo = {
-      //   id: Date.now(), // унікальний id
-      //   text: action.payload,
-      //   completed: false,
-      // };
-      // state.todos.push(newTodo);
-      state.todos.push(action.payload);
+      state.items.push(action.payload);
     },
     removeFromTodos: (state, action) => {
-      state.todos = state.todos.filter((item) => item.id !== action.payload.id);
+      state.items = state.items.filter((item) => item.id !== action.payload.id);
     },
     clearTodos: (state) => {
-      state.todos = [];
+      state.items = [];
     },
   },
 });
